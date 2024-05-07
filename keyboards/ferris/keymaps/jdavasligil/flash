@@ -1,0 +1,5 @@
+Open second terminal and enter:
+
+sudo chmod o+rw /dev/ttyACM0
+
+after resetting.
