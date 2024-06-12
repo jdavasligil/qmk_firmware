@@ -48,7 +48,7 @@ the bottom right, etc.
 Switch to python virtual environment.
 
 ```
-workon ipy
+workon qmk
 ```
 
 Then, compile and flash.

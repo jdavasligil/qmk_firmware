@@ -87,7 +87,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
     case CS_ERR:
         if (record->event.pressed) {
-            SEND_STRING("if err != nil {\n    ");
+            SEND_STRING("if err != nil {");
         }
         break;
     }
@@ -104,10 +104,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
             KC_EXLM, CS_AND, CS_NEQ, CS_LEQ, KC_LT, KC_GT, CS_GEQ, CS_EQ, CS_OR, KC_EQL,
             CS_THEN, KC_AMPR, KC_TILDE, CS_LARRW, CS_LSFT, CS_RSFT, CS_RARRW, KC_CIRC, KC_PIPE, CS_WLRS,
-            CS_ERR, KC_TRNS, KC_TRNS, TO(4)),
+            CS_ERR, KC_TAB, KC_TRNS, TO(4)),
 	[2] = LAYOUT_split_3x5_2(
             KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0,
-            LSFT_T(KC_TAB), KC_GRV, KC_LPRN, KC_LCBR, KC_LBRC, KC_RBRC, KC_RCBR, KC_RPRN, KC_QUOT, RSFT_T(KC_ENT),
+            LSFT_T(KC_ESC), KC_GRV, KC_LPRN, KC_LCBR, KC_LBRC, KC_RBRC, KC_RCBR, KC_RPRN, KC_QUOT, RSFT_T(KC_ENT),
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
             KC_NO, KC_BSPC, KC_NO, KC_NO),
 	[3] = LAYOUT_split_3x5_2(
